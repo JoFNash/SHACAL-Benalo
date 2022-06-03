@@ -1,0 +1,13 @@
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\bin\Debug\netcoreapp3.1\SHACAL.exe
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\bin\Debug\netcoreapp3.1\SHACAL.deps.json
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\bin\Debug\netcoreapp3.1\SHACAL.runtimeconfig.json
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\bin\Debug\netcoreapp3.1\SHACAL.runtimeconfig.dev.json
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\bin\Debug\netcoreapp3.1\SHACAL.dll
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\bin\Debug\netcoreapp3.1\SHACAL.pdb
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.csprojAssemblyReference.cache
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.AssemblyInfoInputs.cache
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.AssemblyInfo.cs
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.csproj.CoreCompileInputs.cache
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.dll
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.pdb
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\obj\Debug\netcoreapp3.1\SHACAL.genruntimeconfig.cache
