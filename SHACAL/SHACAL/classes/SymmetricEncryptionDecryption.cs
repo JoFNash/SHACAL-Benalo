@@ -24,6 +24,8 @@ namespace SHACAL.classes
             byte[] blockD = new byte[4];
             byte[] blockE = new byte[4];
 
+            byte[] res = new byte[20];
+
             for (int i = 0; i < 4; i++)
             {
                 blockA[i] = (byte)block[i];
@@ -48,7 +50,9 @@ namespace SHACAL.classes
                 numberBlockD = numberBlockC;
                 numberBlockE = numberBlockD;
             }
-            return (new byte[5]);
+
+            res = BitConverter.GetBytes(numberBlockA << 32 * 4 | numberBlockB << 32 * 3 | numberBlockC << 32 * 2 | numberBlockD << 32 | numberBlockE);
+            return (res);
         }
 
         public byte[] Decryption(byte[] block)
@@ -56,27 +60,23 @@ namespace SHACAL.classes
             throw new System.NotImplementedException();
         }
 
-        public void getExtensedKey(BigInteger dKey)
+        public void GetExtensedKey(BigInteger dKey)
         {
-            _extensedKey = _keyGenerator.GetExtensedKey(dKey);
+            _extensedKey = _keyGenerator.GetExtensedKeys(dKey);
         }
 
         public uint GetConstant(int round)
         {
-            var const1 = 0x5A827999;
-            var const2 = 0x6ED9EBA1;
-            var const3 = 0x8F1BBCDC;
-            var const4 = 0xCA62C1D6;
             uint res = 0;
 
             if (round >= 0 && round <= 19)
-                res = (uint)const1;
+                res = 0x5A827999;
             if (round >= 20 && round <= 39)
-                res = (uint)const1;
+                res = 0x6ED9EBA1;
             if (round >= 40 && round <= 59)
-                res = (uint)const1;
+                res = 0x8F1BBCDC;
             if (round >= 60 && round <= 79)
-                res = (uint)const1;
+                res = 0xCA62C1D6;
             
             return (res);
         }

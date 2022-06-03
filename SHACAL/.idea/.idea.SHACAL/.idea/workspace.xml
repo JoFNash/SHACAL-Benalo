@@ -16,6 +16,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0a9461b6499743af9372564203586ece2ff88/E/BigInteger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="29zZkbpPHugpvFbiKMz3K4R6gmx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -63,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654118022063</updated>
       <workItem from="1654118033311" duration="1202000" />
-      <workItem from="1654188775479" duration="29872000" />
+      <workItem from="1654188775479" duration="37780000" />
     </task>
     <servers />
   </component>
@@ -81,18 +85,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/SHACAL/Program.cs</url>
-          <line>13</line>
-          <properties documentPath="C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\Program.cs" initialLine="13" containingFunctionPresentation="method 'Main'">
+          <line>20</line>
+          <properties documentPath="C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\Program.cs" initialLine="19" containingFunctionPresentation="method 'Main'">
             <startOffsets>
-              <option value="436" />
+              <option value="713" />
             </startOffsets>
             <endOffsets>
-              <option value="479" />
+              <option value="765" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#SHACAL.classes.KeyExtension.GetExtensedKeys" memberName="tmpK" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

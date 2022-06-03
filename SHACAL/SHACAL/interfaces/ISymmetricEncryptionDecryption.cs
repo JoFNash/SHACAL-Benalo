@@ -8,6 +8,6 @@ namespace SHACAL.interfaces
         
         public byte[] Decryption(byte[] block);
         
-        public void getExtensedKey(BigInteger dKey); /* это тут нужно? */
+        public void GetExtensedKey(BigInteger dKey); /* это тут нужно? */
     }
 }

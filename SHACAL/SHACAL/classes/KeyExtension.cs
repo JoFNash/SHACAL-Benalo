@@ -6,15 +6,13 @@ namespace SHACAL.classes
 {
     public class KeyExtension : interfaces.IKeyExtension
     {
-        public byte[][] GetExtensedKey(BigInteger key) /* 512 bit */ //byte[] bytesArray
+        public byte[][] GetExtensedKeys(BigInteger key) /* 512 bit */ //byte[] bytesArray
         {
             var roundKeys = new byte[80][];
-            var first16RoundKeys = new byte[16][];
-            // var value = BitConverter.T
 
             for (int i = 0; i < 16; i++)
             {
-                var tmpK = (uint)(key >> (i * 32)) & ((1 << 32) - 1);
+                var tmpK = (uint)(key >> (i * 32)) & (((ulong)1 << 32) - 1);
                 roundKeys[i] = BitConverter.GetBytes(tmpK);
             }
 
