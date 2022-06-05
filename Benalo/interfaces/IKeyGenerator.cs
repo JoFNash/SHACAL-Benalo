@@ -12,11 +12,10 @@ namespace Benalo.interfaces
         /* secret key */
         public BigInteger fi;
         public BigInteger x;
-
     }
 
     public interface IKeyGenerator
     {
-        public Key GetPublicOpenKeys(BigInteger message);
+        public Key GetPublicOpenKeys(BigInteger block);
     }
 }

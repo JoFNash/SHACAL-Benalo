@@ -51,7 +51,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.SHACAL">
+  <component name="RunManager" selected=".NET Project.Benalo">
     <configuration name="Benalo" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -98,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654118022063</updated>
       <workItem from="1654118033311" duration="1202000" />
-      <workItem from="1654188775479" duration="101479000" />
+      <workItem from="1654188775479" duration="104315000" />
     </task>
     <servers />
   </component>
@@ -126,6 +126,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/../Benalo/classes/AsymmetricEncryptionDecryption.cs</url>
+          <line>12</line>
+          <properties documentPath="C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\classes\AsymmetricEncryptionDecryption.cs" initialLine="12" containingFunctionPresentation="constructor 'AsymmetricEncryptionDecryption'">
+            <startOffsets>
+              <option value="396" />
+            </startOffsets>
+            <endOffsets>
+              <option value="458" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

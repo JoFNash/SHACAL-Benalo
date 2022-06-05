@@ -8,10 +8,10 @@ namespace Benalo.classes
         private Key _keys;
         private classes.KeyGenerator _keyGenerator;
 
-        public AsymmetricEncryptionDecryption(Key keys, KeyGenerator generator)
+        public AsymmetricEncryptionDecryption(BigInteger block, Tests nameTest, double probability, ulong size)
         {
-            _keys = keys;
-            _keyGenerator = generator;
+            _keyGenerator = new KeyGenerator(nameTest, probability, size);
+            _keys = _keyGenerator.GetPublicOpenKeys(block);
         }
 
         public BigInteger Encryption(BigInteger block)

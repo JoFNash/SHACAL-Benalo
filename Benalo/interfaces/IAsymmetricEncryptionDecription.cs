@@ -4,11 +4,11 @@ namespace Benalo.interfaces
 {
     public interface IAsymmetricEncryptionDecription
     {
-        public BigInteger Encryption(BigInteger messsage);
+        public BigInteger Encryption(BigInteger block);
         
-        public BigInteger Decryption(BigInteger message);
+        public BigInteger Decryption(BigInteger block);
 
-        public void GetPublicOpenKeys(BigInteger message);
+        public void GetPublicOpenKeys(BigInteger block);
 
     }
 }

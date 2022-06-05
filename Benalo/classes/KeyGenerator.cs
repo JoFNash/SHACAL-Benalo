@@ -13,9 +13,9 @@ namespace Benalo.classes
 
         public KeyGenerator(Tests nameTest, double probability, ulong size)
         {
+            _size = size;
             _nameTest = nameTest;
             _probability = probability;
-            _size = size;
         }
 
         public Key GetPublicOpenKeys(BigInteger block)

@@ -1,0 +1,13 @@
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\bin\Debug\netcoreapp3.1\Benalo.exe
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\bin\Debug\netcoreapp3.1\Benalo.deps.json
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\bin\Debug\netcoreapp3.1\Benalo.runtimeconfig.json
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\bin\Debug\netcoreapp3.1\Benalo.runtimeconfig.dev.json
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\bin\Debug\netcoreapp3.1\Benalo.dll
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\bin\Debug\netcoreapp3.1\Benalo.pdb
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.csprojAssemblyReference.cache
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.AssemblyInfoInputs.cache
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.AssemblyInfo.cs
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.csproj.CoreCompileInputs.cache
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.dll
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.pdb
+C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\Benalo\obj\Debug\netcoreapp3.1\Benalo.genruntimeconfig.cache
