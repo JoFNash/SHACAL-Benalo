@@ -44,7 +44,7 @@ namespace Benalo.classes
 
         public void GetPublicOpenKeys(BigInteger block)
         {
-            _keys = 
+            _keys = _keyGenerator.GetPublicOpenKeys(block);
         }
     }
 }
