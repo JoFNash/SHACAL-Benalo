@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Numerics;
 using SHACAL.interfaces;
 
@@ -41,17 +42,24 @@ namespace SHACAL.classes
             uint numberD = BitConverter.ToUInt32(blockD, 0);
             uint numberE = BitConverter.ToUInt32(blockE, 0);
             
+            List<uint> oldBlocks = new List<uint> {numberA, numberB, numberC, numberD, numberE};
+            List<uint> newBlocks = new List<uint> {numberA, numberB, numberC, numberD, numberE};
+
             for (int round = 0; round < 80; round++)
             {
-                numberA = BitConverter.ToUInt32(_extensedKey[round]) + (numberA << 5) + _roundTranformation.RoundFunction(numberB, numberC, numberD, round) +
-                                    numberE;
-                numberB = numberA;
-                numberC = numberB << 30;
-                numberD = numberC;
-                numberE = numberD;
+                newBlocks[0] = BitConverter.ToUInt32(_extensedKey[round]) + (oldBlocks[0] << 5) +
+                               _roundTranformation.RoundFunction(oldBlocks[1], oldBlocks[2], oldBlocks[3], round) +
+                               oldBlocks[4] + GetConstant(round);
+                newBlocks[1] = oldBlocks[0];
+                newBlocks[2] = oldBlocks[1] << 30;
+                newBlocks[3] = oldBlocks[2];
+                newBlocks[4] = oldBlocks[3];
+
+                for (int i = 0; i < 5; i++)
+                    oldBlocks[i] = newBlocks[i];
             }
 
-            res = ((BigInteger)numberA << 32 * 4 | (BigInteger)numberB << 32 * 3 |  (BigInteger)(numberC) << 32 * 2 | (BigInteger)numberD << 32 | numberE).ToByteArray();
+            res = (newBlocks[0] | (BigInteger)newBlocks[1] << 32 |  (BigInteger)(newBlocks[2]) << (32 * 2) | (BigInteger)newBlocks[3] << (32 * 3) | (BigInteger)newBlocks[4] << (32 * 4)).ToByteArray();
             return (res);
         }
 
@@ -80,44 +88,31 @@ namespace SHACAL.classes
             uint numberD = BitConverter.ToUInt32(blockD, 0);
             uint numberE = BitConverter.ToUInt32(blockE, 0);
             
-            for (int round = 79; round >= 0; round--)
+            List<uint> oldBlocks = new List<uint> {numberA, numberB, numberC, numberD, numberE};
+            List<uint> newBlocks = new List<uint> {numberA, numberB, numberC, numberD, numberE};
+
+            for (int round = 79; round <= 0; round--)
             {
-                numberA = numberB;
-                numberB = numberC << 2;
-                numberC = numberD;
-                numberD = numberE;
-                numberE = numberA + ~(numberB << 5) +
-                          ~_roundTranformation.RoundFunction((numberC << 2), numberD, numberE, round) + ~BitConverter.ToUInt32(_extensedKey[round]) + 4;
+                newBlocks[0] = oldBlocks[1];
+                newBlocks[1] = oldBlocks[2] << 2;
+                newBlocks[2] = oldBlocks[3];
+                newBlocks[3] = oldBlocks[4];
+                newBlocks[4] = oldBlocks[0] + ~(oldBlocks[1] << 5) +
+                               ~_roundTranformation.RoundFunction((oldBlocks[2] << 2), oldBlocks[3], oldBlocks[4], round) + ~BitConverter.ToUInt32(_extensedKey[round]) + 4 + ~GetConstant(round);
+                
+                for (int i = 0; i < 5; i++)
+                    oldBlocks[i] = newBlocks[i];
             }
-            res = ((BigInteger)numberA << 32 * 4 | (BigInteger)numberB << 32 * 3 |  (BigInteger)(numberC) << 32 * 2 | (BigInteger)numberD << 32 | numberE).ToByteArray();
+            res = (newBlocks[0] | (BigInteger)newBlocks[1] << 32 |  (BigInteger)(newBlocks[2]) << (32 * 2) | (BigInteger)newBlocks[3] << (32 * 3) | (BigInteger)newBlocks[4] << (32 * 4)).ToByteArray();
             return (res);
         }
-
-        public uint GetRoundKey(int round)
-        {
-            if (round < 0 || round > 79)
-                throw new ArgumentException("Incorrect round value in getRoundKey");
-            
-            if (round >= 0 && round < 16)
-            {
-                return (BitConverter.ToUInt32(_extensedKey[round]));
-            }
-
-            var keyTmp1 = BitConverter.ToUInt32(_extensedKey[round - 3]);
-            var keyTmp2 = BitConverter.ToUInt32(_extensedKey[round - 8]);
-            var keyTmp3 = BitConverter.ToUInt32(_extensedKey[round - 14]);
-            var keyTmp4 = BitConverter.ToUInt32(_extensedKey[round - 16]);
-
-            var keyResult = keyTmp1 ^ keyTmp2 ^ keyTmp3 ^ keyTmp4;
-            return (keyResult << 1);
-        }
-
+        
         public void GetExtensedKey(byte[] dKey)
         {
             _extensedKey = _keyGenerator.GetExtensedKeys(dKey);
         }
 
-        public uint GetConstantEncrypt(int round)
+        public uint GetConstant(int round)
         {
             uint res = 0;
 
@@ -129,22 +124,6 @@ namespace SHACAL.classes
                 res = 0x8F1BBCDC;
             if (round >= 60 && round <= 79)
                 res = 0xCA62C1D6;
-            
-            return (res);
-        }
-        
-        public uint GetConstantDecrypt(int round)
-        {
-            uint res = 0;
-
-            if (round >= 0 && round <= 19)
-                res = 0xCA62C1D6;
-            if (round >= 20 && round <= 39)
-                res = 0x8F1BBCDC;
-            if (round >= 40 && round <= 59)
-                res = 0x6ED9EBA1;
-            if (round >= 60 && round <= 79)
-                res = 0x5A827999;
             
             return (res);
         }

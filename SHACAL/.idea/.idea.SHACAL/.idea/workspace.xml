@@ -98,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654118022063</updated>
       <workItem from="1654118033311" duration="1202000" />
-      <workItem from="1654188775479" duration="94693000" />
+      <workItem from="1654188775479" duration="101479000" />
     </task>
     <servers />
   </component>
@@ -112,6 +112,23 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SHACAL/classes/SymmetricEncryptionDecryption.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\Ольга\Desktop\3 КУРС\Криптография\Tmp_SHACAL\SHACAL\SHACAL\classes\SymmetricEncryptionDecryption.cs" initialLine="27" containingFunctionPresentation="method 'Encryption'">
+            <startOffsets>
+              <option value="917" />
+            </startOffsets>
+            <endOffsets>
+              <option value="943" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Frame#SHACAL.classes.RoundTransformation.RoundFunction" memberName="round" />

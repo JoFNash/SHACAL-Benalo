@@ -8,9 +8,9 @@ namespace SHACAL
     {
         static void Main(string[] args)
         {
-            byte[] bytesArray = new byte[20] {1, 9, 12, 9, 67, 3, 2, 1, 3, 90, 12, 255, 1, 40, 5, 6, 7, 3, 2, 2};
+            byte[] bytesArray = new byte[20] {255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0};
             //new Random().NextBytes(bytesArray);
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < bytesArray.Length; i++)
                 Console.Write(bytesArray[i] + " ");
             Console.WriteLine();
 
@@ -18,12 +18,12 @@ namespace SHACAL
             byte[] key = new byte[] { 8, 1, 3, 4, 5, 5};
             sed.GetExtensedKey(key);
             byte[] result = sed.Encryption(bytesArray);
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < result.Length; i++)
                 Console.Write(result[i] + " ");
 
             Console.WriteLine();
             byte[] myBlock = sed.Decryption(bytesArray);
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < myBlock.Length; i++)
                 Console.Write(myBlock[i] + " ");
             
             // KeyExtension keyObject = new KeyExtension();
