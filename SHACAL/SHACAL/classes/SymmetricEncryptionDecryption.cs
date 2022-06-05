@@ -93,11 +93,6 @@ namespace SHACAL.classes
             return (res);
         }
 
-        public void GetExtensedKey(BigInteger dKey)
-        {
-            throw new NotImplementedException();
-        }
-
         public uint GetRoundKey(int round)
         {
             if (round < 0 || round > 79)
