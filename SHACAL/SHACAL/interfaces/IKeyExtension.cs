@@ -5,6 +5,6 @@ namespace SHACAL.interfaces
 {
     public interface IKeyExtension
     {
-        public byte[][] GetExtensedKeys(BigInteger key); /* key (512 bit) */
+        public byte[][] GetExtensedKeys(byte[] key); /* key (512 bit) */
     }
 }
