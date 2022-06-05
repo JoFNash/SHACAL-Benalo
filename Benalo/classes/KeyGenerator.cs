@@ -49,10 +49,11 @@ namespace Benalo.classes
         public BigInteger GetRandomPrimeNumber()
         {
             byte[] massBytes = new byte[_size];
+            var random = new Random();
 
             while (true)
             {
-                new Random().NextBytes(massBytes); /* haha */
+                random.NextBytes(massBytes); /* haha */
                 var primeNum = new BigInteger(massBytes);
                 if (primeNum < 2)
                     continue;

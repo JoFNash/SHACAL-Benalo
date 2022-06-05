@@ -12,7 +12,7 @@ namespace Benalo.classes
 
             if (number == 1)
                 return (false);
-            for (var i = 0; 1 - Math.Pow(2, -i) <= probability; i++)
+            for (var i = 0; 1.0 - Math.Pow(2, -i) <= probability; i++)
             {
                 var a = extra.ExtraFunctional.GetRandomInteger(2, number - 1);
 

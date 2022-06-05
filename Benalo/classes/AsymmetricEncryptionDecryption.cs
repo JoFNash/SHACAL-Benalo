@@ -6,7 +6,7 @@ namespace Benalo.classes
     public sealed class AsymmetricEncryptionDecryption : interfaces.IAsymmetricEncryptionDecription
     {
         private Key _keys;
-        private classes.KeyGenerator _keyGenerator;
+        private readonly classes.KeyGenerator _keyGenerator;
 
         public AsymmetricEncryptionDecryption(BigInteger block, Tests nameTest, double probability, ulong size)
         {
@@ -32,7 +32,7 @@ namespace Benalo.classes
         public BigInteger Decryption(BigInteger block)
         {
             BigInteger mRes = 0;
-            var a = BigInteger.ModPow(block, _keys.fi / _keys.n, _keys.n);
+            var a = BigInteger.ModPow(block, _keys.fi / _keys.r, _keys.n);
             for (BigInteger m = 0; m < _keys.r; m++)
             {
                 var value = BigInteger.ModPow(_keys.x, m, _keys.n);

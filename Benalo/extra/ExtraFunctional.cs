@@ -37,7 +37,7 @@ namespace Benalo.extra
 
             do
             {
-                int t = 0;
+                var t = 0;
                 while (a % 2 == 0)
                 {
                     t += 1;
@@ -50,7 +50,7 @@ namespace Benalo.extra
                         r = (-1) * r;
                 }
 
-                if (a % 4 == 3 || p % 4 == 3)
+                if (a % 4 == 3 && p % 4 == 3)
                 {
                     r = (-1) * r;
                 }
